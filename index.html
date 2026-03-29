@@ -6,7 +6,7 @@
 
 <title>GKARAS ROBOTICS</title>
 
-<!-- Open Graph (Viber, Messenger etc) -->
+<!-- Open Graph -->
 <meta property="og:title" content="GKARAS ROBOTICS">
 <meta property="og:description" content="Συστήματα & Εφαρμογές">
 <meta property="og:image" content="https://gkarasrobotics.github.io/preview.jpg">
@@ -15,11 +15,9 @@
 <meta property="og:site_name" content="GKARAS ROBOTICS">
 <meta property="og:locale" content="el_GR">
 
-<!-- Extra -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0f2027">
 
-<!-- Favicon -->
 <link rel="icon" href="https://gkarasrobotics.github.io/favicon.ico">
 
 <style>
@@ -32,7 +30,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Animated background */
 body::before {
     content: "";
     position: fixed;
@@ -67,7 +64,6 @@ body::before {
     margin-bottom: 40px;
 }
 
-/* Cards */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -116,14 +112,17 @@ body::before {
     transform: scale(1.05);
 }
 
-/* Footer */
+/* διαφορετικό χρώμα για ιατρείο */
+.card.medical {
+    background: rgba(0, 150, 120, 0.2);
+}
+
 .footer {
     margin-top: 60px;
     color: #aaa;
     font-size: 0.8rem;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
     .logo {
         font-size: 2rem;
@@ -151,6 +150,12 @@ body::before {
             <h2>ΚΑΤΑΝΟΜΗ</h2>
             <p>Σύστημα κατανομής υπηρεσιών</p>
             <a href="https://gkarasrobotics.github.io/KATANOMH/" target="_blank">Άνοιγμα</a>
+        </div>
+
+        <div class="card medical">
+            <h2>MARGIMEDCLINICS</h2>
+            <p>Σύστημα διαχείρισης ιατρείου</p>
+            <a href="https://gkarasrobotics.github.io/-MARGIMEDCLINICS/" target="_blank">Άνοιγμα</a>
         </div>
 
         <div class="card">
