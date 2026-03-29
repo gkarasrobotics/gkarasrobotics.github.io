@@ -6,49 +6,128 @@
 
 <title>GKARAS ROBOTICS</title>
 
+<!-- Open Graph (Viber, Messenger etc) -->
+<meta property="og:title" content="GKARAS ROBOTICS">
+<meta property="og:description" content="Συστήματα & Εφαρμογές">
+<meta property="og:image" content="https://gkarasrobotics.github.io/preview.jpg">
+<meta property="og:url" content="https://gkarasrobotics.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GKARAS ROBOTICS">
+<meta property="og:locale" content="el_GR">
+
+<!-- Extra -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f2027">
+
+<!-- Favicon -->
+<link rel="icon" href="https://gkarasrobotics.github.io/favicon.ico">
+
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: white;
     text-align: center;
+    overflow-x: hidden;
+}
+
+/* Animated background */
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,198,255,0.15) 10%, transparent 40%);
+    animation: move 12s linear infinite;
+    z-index: -1;
+}
+
+@keyframes move {
+    from { transform: translate(0,0); }
+    to { transform: translate(-50%, -50%); }
 }
 
 .container {
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
-h1 {
+.logo {
     font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 3px;
     margin-bottom: 10px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-p {
+.subtitle {
     color: #ccc;
     margin-bottom: 40px;
 }
 
-.buttons {
+/* Cards */
+.cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
-a {
-    text-decoration: none;
-    padding: 15px 25px;
-    border-radius: 10px;
-    background: #00c6ff;
+.card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 260px;
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
     color: black;
+    border-radius: 8px;
+    text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
 }
 
-a:hover {
-    background: #0072ff;
+.card a:hover {
     color: white;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    margin-top: 60px;
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .logo {
+        font-size: 2rem;
+    }
 }
 </style>
 </head>
@@ -56,14 +135,36 @@ a:hover {
 <body>
 
 <div class="container">
-    <h1>GKARAS ROBOTICS</h1>
-    <p>Συστήματα & Εφαρμογές</p>
 
-    <div class="buttons">
-        <a href="https://gkarasrobotics.github.io/ZEROING/">ZEROING</a>
-        <a href="https://gkarasrobotics.github.io/KATANOMH/">ΚΑΤΑΝΟΜΗ</a>
-        <a href="https://github.com/gkarasrobotics">GitHub Profile</a>
+    <div class="logo">GKARAS ROBOTICS</div>
+    <div class="subtitle">Συστήματα & Εφαρμογές</div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>ZEROING</h2>
+            <p>Υπολογισμός τιμών μηδενισμού</p>
+            <a href="https://gkarasrobotics.github.io/ZEROING/" target="_blank">Άνοιγμα</a>
+        </div>
+
+        <div class="card">
+            <h2>ΚΑΤΑΝΟΜΗ</h2>
+            <p>Σύστημα κατανομής υπηρεσιών</p>
+            <a href="https://gkarasrobotics.github.io/KATANOMH/" target="_blank">Άνοιγμα</a>
+        </div>
+
+        <div class="card">
+            <h2>GitHub</h2>
+            <p>Δες όλα τα projects</p>
+            <a href="https://github.com/gkarasrobotics" target="_blank">Profile</a>
+        </div>
+
     </div>
+
+    <div class="footer">
+        © 2026 GKARAS ROBOTICS
+    </div>
+
 </div>
 
 </body>
